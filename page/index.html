@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <header class="head w-full top-0 z-[100] fixed">
+      <nav class="bg-white border-gray-200 dark:bg-fuchsia-600">
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <a
+            href="https://flowbite.com/"
+            class="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <img
+              src="../assets/img/flower-shop.png"
+              class="h-8"
+              alt="Flowbite Logo"
+            />
+            <span
+              class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+              >FlowerShop</span
+            >
+          </a>
+          <div class="flex md:order-2 gap-2">
+            <button
+              type="button"
+              data-collapse-toggle="navbar-search"
+              aria-controls="navbar-search"
+              aria-expanded="false"
+              class="md:hidden text-black-500 dark:text-black-400 hover:bg-black-100 dark:hover:bg-black-700 focus:outline-none focus:ring-4 focus:ring-black-200 dark:focus:ring-black-700 rounded-lg text-sm p-2.5 me-1"
+            >
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                />
+              </svg>
+              <span class="sr-only">Search</span>
+            </button>
+            <div class="relative hidden md:block">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-white bn-500 dark:text-gray-400"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+                <span class="sr-only">Search icon</span>
+              </div>
+              <input
+                type="text"
+                id="search-navbar"
+                class="block w-full p-2 ps-10 text-sm text-black-900 border border-black-300 rounded-lg bg-black-50 focus:ring-black-500 focus:border-white-500 dark:bg-white-700 dark:border-white-600 dark:placeholder-white-400 dark:text-white dark:focus:ring-white-500 dark:focus:border-black-500"
+                placeholder="Search..."
+              />
+            </div>
+            <button
+              data-collapse-toggle="navbar-search"
+              type="button"
+              class="inline-flex items-center p-2 w-9 h-10 justify-center text-sm text-black-500 rounded-lg md:hidden hover:bg-black-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-black-400 dark:hover:bg-black-700 dark:focus:ring-black-600"
+              aria-controls="navbar-search"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+            <button
+              type="button"
+              class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-600"
+            >
+              Login
+              <i class="fa-solid fa-circle-user"></i>
+            </button>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-search"
+          >
+            <div class="relative mt-3 md:hidden">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-black-900 dark:text-black-900"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+              </div>
+              <input
+                type="text"
+                id="search-navbar"
+                class="block w-full p-2 ps-10 text-sm text-black-900 border border-gray-300 rounded-lg bg-black-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-black-700 dark:border-black-600 dark:placeholder-black-400 dark:text-black dark:focus:ring-blac-500 dark:focus:border-black-500"
+                placeholder="Search..."
+              />
+            </div>
+            <ul
+              class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-pink-100 rounded-lg bg-blue-50 md:space-x-1 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-fuchsia-600 md:dark:border-white-700"
+            >
+              <!-- bg-fuchsia-400 -->
+              <li
+                class="h-full py-2 px-5 hover:bg-fuchsia-400 transition duration-150 ease-out hover:ease-in rounded-sm"
+              >
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-white bg-white-700 rounded md:bg-transparent md:text-white-700 md:p-0 md:dark:text-white-500"
+                  aria-current="page"
+                  >Best Seller</a
+                >
+              </li>
+              <li
+                class="h-full py-2 px-5 hover:bg-fuchsia-400 transition duration-150 ease-out hover:ease-in rounded-sm"
+              >
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-white bg-white-700 rounded md:bg-transparent md:text-white-700 md:p-0 md:dark:text-white-500"
+                  aria-current="page"
+                  >About us</a
+                >
+              </li>
+              <li
+                class="h-full py-2 px-5 hover:bg-fuchsia-400 transition duration-150 ease-out hover:ease-in rounded-sm"
+              >
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-white bg-white-700 rounded md:bg-transparent md:text-white-700 md:p-0 md:dark:text-white-500"
+                  aria-current="page"
+                  >Contact us</a
+                >
+              </li>
+              <li
+                class="h-full py-2 px-5 hover:bg-fuchsia-400 transition duration-150 ease-out hover:ease-in rounded-sm"
+              >
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-white bg-white-700 rounded md:bg-transparent md:text-white-700 md:p-0 md:dark:text-white-500"
+                  aria-current="page"
+                  >Delivery</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- navbar -->
+
+    <!-- main -->
+    <main>
+      <!-- section1 top information -->
+      <section class="w-full bg-fuchsia-200 mt-16 relative">
+        <div
+          class="max-w-screen-xl flex w-full relative items-center justify-between mx-auto min-h-[560px]"
+        >
+          <div class="w-full md:1/5 z-[3]">
+            <div class="p-4 lg:max-w-screen-md">
+              <h1
+                class="lg:text-7xl text-5xl font-semibold text-black-900 dark:text-fuchsia-600"
+              >
+                Gift and Flower for
+              </h1>
+              <p class="mt-4 lg:text-2xl text-lg font-semibold text-black-500 dark:text-white-400">
+                Your love one and for yourself
+              </p>
+              <p
+                class="mt-4 lg:text-2xl text-lg text-black-500 dark:text-white-400"
+              >
+                Buy those flower for the one you love❤ and can gift it to
+                yourself to have more motivate yourself to overcome your
+                problem.
+              </p>
+              <div class="mt-8 flex">
+                <a
+                  href="#"
+                  class="flex space-x-3 px-6 py-3 text-sm font-medium text-white rounded-full border bg-fuchsia-600/50 border-fuchsia-600 justify-center hover:bg-fuchsia-600 dark:hover:bg-fuchsia-700 dark:border-fuchsia-700 transition duration-150 ease-out hover:ease-in"
+                >
+                  <div class="flex justify-center item-center gap-1">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.8545 13.2726L21.9597 6.27346C22.0043 6.12466 22.012 5.96806 21.9821 5.81596C21.9522 5.66387 21.8856 5.52045 21.7874 5.39697C21.6893 5.2735 21.5623 5.17335 21.4165 5.1044C21.2707 5.03545 21.11 4.99958 20.9471 4.99962H7.02098L6.39467 2.74491C6.3354 2.53141 6.2034 2.34256 6.01927 2.20781C5.83514 2.07306 5.60923 1.99999 5.37679 2H3.05262C2.77345 2 2.50571 2.10534 2.3083 2.29286C2.1109 2.48037 2 2.73469 2 2.99987C2 3.26506 2.1109 3.51938 2.3083 3.70689C2.50571 3.89441 2.77345 3.99975 3.05262 3.99975H4.56628L5.19785 6.25447V6.26447V6.27346L7.30308 13.2726L8.08833 16.2582C7.56848 16.4772 7.12052 16.8254 6.79175 17.2661C6.46297 17.7069 6.26559 18.2237 6.22044 18.7622C6.17529 19.3007 6.28404 19.8407 6.53523 20.3253C6.78641 20.81 7.17069 21.2211 7.6475 21.5155C8.12431 21.8099 8.67595 21.9764 9.24417 21.9977C9.81239 22.0189 10.3761 21.894 10.8758 21.6362C11.3755 21.3783 11.7926 20.997 12.0831 20.5327C12.3736 20.0683 12.5266 19.538 12.5262 18.9979C12.5227 18.6565 12.4572 18.3182 12.3325 17.998H14.8251C14.7004 18.3182 14.6349 18.6565 14.6314 18.9979C14.6314 19.5911 14.8166 20.1711 15.1636 20.6644C15.5106 21.1577 16.0038 21.5421 16.5808 21.7692C17.1578 21.9962 17.7928 22.0556 18.4053 21.9399C19.0179 21.8241 19.5806 21.5384 20.0222 21.1189C20.4638 20.6994 20.7646 20.1649 20.8864 19.5831C21.0083 19.0012 20.9457 18.3981 20.7067 17.85C20.4677 17.3019 20.063 16.8334 19.5437 16.5038C19.0243 16.1742 18.4138 15.9982 17.7892 15.9982H10.1894L9.66305 13.9985H18.8419C19.0708 13.9986 19.2935 13.9277 19.4762 13.7967C19.659 13.6657 19.7918 13.4817 19.8545 13.2726ZM17.7892 17.998C17.9974 17.998 18.201 18.0566 18.3741 18.1665C18.5472 18.2764 18.6821 18.4325 18.7617 18.6152C18.8414 18.7979 18.8623 18.999 18.8216 19.1929C18.781 19.3869 18.6808 19.5651 18.5336 19.7049C18.3864 19.8447 18.1988 19.94 17.9946 19.9785C17.7904 20.0171 17.5788 19.9973 17.3864 19.9216C17.1941 19.846 17.0297 19.7178 16.914 19.5534C16.7984 19.3889 16.7366 19.1956 16.7366 18.9979C16.7366 18.7327 16.8475 18.4784 17.0449 18.2909C17.2423 18.1033 17.5101 17.998 17.7892 17.998ZM10.4209 18.9979C10.4209 19.1956 10.3592 19.3889 10.2435 19.5534C10.1279 19.7178 9.96348 19.846 9.77114 19.9216C9.57879 19.9973 9.36715 20.0171 9.16296 19.9785C8.95877 19.94 8.77121 19.8447 8.624 19.7049C8.47679 19.5651 8.37654 19.3869 8.33593 19.1929C8.29531 18.999 8.31616 18.7979 8.39583 18.6152C8.4755 18.4325 8.61041 18.2764 8.78351 18.1665C8.95662 18.0566 9.16013 17.998 9.36832 17.998C9.64749 17.998 9.91522 18.1033 10.1126 18.2909C10.31 18.4784 10.4209 18.7327 10.4209 18.9979ZM15.684 9.999H14.6314V10.9989C14.6314 11.2641 14.5205 11.5184 14.3231 11.7059C14.1257 11.8934 13.858 11.9987 13.5788 11.9987C13.2996 11.9987 13.0319 11.8934 12.8345 11.7059C12.6371 11.5184 12.5262 11.2641 12.5262 10.9989V9.999H11.4735C11.1944 9.999 10.9266 9.89365 10.7292 9.70614C10.5318 9.51863 10.4209 9.26431 10.4209 8.99912C10.4209 8.73394 10.5318 8.47962 10.7292 8.29211C10.9266 8.10459 11.1944 7.99925 11.4735 7.99925H12.5262V6.99937C12.5262 6.73419 12.6371 6.47987 12.8345 6.29236C13.0319 6.10484 13.2996 5.9995 13.5788 5.9995C13.858 5.9995 14.1257 6.10484 14.3231 6.29236C14.5205 6.47987 14.6314 6.73419 14.6314 6.99937V7.99925H15.684C15.9632 7.99925 16.2309 8.10459 16.4283 8.29211C16.6257 8.47962 16.7366 8.73394 16.7366 8.99912C16.7366 9.26431 16.6257 9.51863 16.4283 9.70614C16.2309 9.89365 15.9632 9.999 15.684 9.999Z"
+                        fill="white"
+                      />
+                    </svg>
+
+                    Shop Now
+                  </div>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20.9021 12.5341C20.9995 12.2789 21.0249 11.998 20.9753 11.7271C20.9256 11.4562 20.803 11.2073 20.6231 11.012L15.4799 5.42631C15.3613 5.29294 15.2194 5.18656 15.0626 5.11337C14.9057 5.04019 14.737 5.00166 14.5662 5.00005C14.3955 4.99844 14.2262 5.03377 14.0682 5.10399C13.9102 5.1742 13.7666 5.27789 13.6459 5.409C13.5252 5.54012 13.4297 5.69603 13.365 5.86765C13.3004 6.03926 13.2678 6.22315 13.2693 6.40856C13.2708 6.59398 13.3063 6.77722 13.3737 6.94759C13.4411 7.11796 13.539 7.27205 13.6618 7.40086L16.6114 10.6043H4.2858C3.94478 10.6043 3.61773 10.7514 3.3766 11.0133C3.13547 11.2752 3 11.6303 3 12.0007C3 12.3711 3.13547 12.7262 3.3766 12.9881C3.61773 13.25 3.94478 13.3971 4.2858 13.3971H16.6114L13.6631 16.5991C13.5403 16.728 13.4423 16.882 13.375 17.0524C13.3076 17.2228 13.2721 17.406 13.2706 17.5914C13.2691 17.7769 13.3017 17.9607 13.3663 18.1324C13.431 18.304 13.5264 18.4599 13.6472 18.591C13.7679 18.7221 13.9115 18.8258 14.0695 18.896C14.2275 18.9662 14.3968 19.0016 14.5675 18.9999C14.7383 18.9983 14.907 18.9598 15.0639 18.8866C15.2207 18.8134 15.3626 18.7071 15.4812 18.5737L20.6244 12.988C20.7435 12.858 20.8379 12.7038 20.9021 12.5341Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="absolute top-0 right-0">
+            <img
+              src="../assets/img/img2.png"
+              class="w-[400px] h-[400px] object-cover"
+              alt="Flower"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- section2 List product-->
+      <section class="w-full relative py-6 pb-32">
+        <div
+          class="max-w-screen-xl flex w-full relative flex-col items-center mx-auto min-h-[560px]"
+        >
+          <div class="mt-6 flex flex-col items-center">
+            <h1 class="lg:text-4xl text-2xl text-fuchsia-600 font-bold">
+              Best Selling of the Year
+            </h1>
+            <div class="w-3/4 h-1 rounded-full bg-fuchsia-600/50 mt-3"></div>
+          </div>
+          <div
+            class="grid xl:grid-cols-12 md:grid-cols-6 w-full mt-12 gap-4 xl:p-0 p-4"
+          >
+            <div
+              class="col-span-3 group p-2 border w-full rounded-xl cursor-pointer hover:shadow-lg hover:scale-105 transition duration-150 ease-out hover:ease-in shadow-fuchsia-600 rounded-sm"
+            >
+              <img
+                src="../assets/img/img3.jpg"
+                class="w-full h-[300px] object-cover rounded-xl group-"
+                alt="Flower"
+              />
+              <div class="mt-2 py-2 gap-2 flex flex-col divide-y-2">
+                <h1 class="text-lg">Bouquet Of Red & White Roses</h1>
+                <div class="flex justify-between items-center pt-2">
+                  <p class="text-base">
+                    Price: <span class="text-bold text-xl">$50-$90</span>
+                  </p>
+                  <p
+                    class="text-base p-2 flex items-center justify-center bg-fuchsia-600 rounded-lg px-2"
+                  >
+                    <a href="#" class="text-white">Add to Cart</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-span-3 group p-2 border w-full rounded-xl cursor-pointer hover:shadow-lg hover:scale-105 transition duration-150 ease-out hover:ease-in shadow-fuchsia-600 rounded-sm"
+            >
+              <img
+                src="../assets/img/img4.jpg"
+                class="w-full h-[300px] object-cover rounded-xl group-"
+                alt="Flower"
+              />
+              <div class="mt-2 py-2 gap-2 flex flex-col divide-y-2">
+                <h1 class="text-lg">Bouquet Of White Lilies</h1>
+                <div class="flex justify-between items-center pt-2">
+                  <p class="text-base">
+                    Price: <span class="text-bold text-xl">$60-$95</span>
+                  </p>
+                  <p
+                    class="text-base p-2 flex items-center justify-center bg-fuchsia-600 rounded-lg px-2"
+                  >
+                    <a href="#" class="text-white">Add to Cart</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-span-3 group p-2 border w-full rounded-xl cursor-pointer hover:shadow-lg hover:scale-105 transition duration-150 ease-out hover:ease-in shadow-fuchsia-600 rounded-sm"
+            >
+              <img
+                src="../assets/img/img5.jpg"
+                class="w-full h-[300px] object-cover rounded-xl group-"
+                alt="Flower"
+              />
+              <div class="mt-2 py-2 gap-2 flex flex-col divide-y-2">
+                <h1 class="text-lg">Bouquet Of Purple Orchids</h1>
+                <div class="flex justify-between items-center pt-2">
+                  <p class="text-base">
+                    Price: <span class="text-bold text-xl">$55-$90</span>
+                  </p>
+                  <p
+                    class="text-base p-2 flex items-center justify-center bg-fuchsia-600 rounded-lg px-2"
+                  >
+                    <a href="#" class="text-white">Add to Cart</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-span-3 group p-2 border w-full rounded-xl cursor-pointer hover:shadow-lg hover:scale-105 transition duration-150 ease-out hover:ease-in shadow-fuchsia-600 rounded-sm"
+            >
+              <img
+                src="../assets/img/img6.png"
+                class="w-full h-[300px] object-cover rounded-xl group-"
+                alt="Flower"
+              />
+              <div class="mt-2 py-2 gap-2 flex flex-col divide-y-2">
+                <h1 class="text-lg">Bouquet Of White Carnation</h1>
+                <div class="flex justify-between items-center pt-2">
+                  <p class="text-base">
+                    Price: <span class="text-bold text-xl">$45-$65</span>
+                  </p>
+                  <p
+                    class="text-base p-2 flex items-center justify-center bg-fuchsia-600 rounded-lg px-2"
+                  >
+                    <a href="#" class="text-white">Add to Cart</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section3 flower banner -->
+      <section
+        class="w-full h-[200px] bg-[url('../assets/img/flower-1.jpg')] bg-no-repeat bg-center bg-cover"
+      >
+        <div class="w-full h-full bg-black/40 flex items-center justify-center">
+          <h1 class="text-center text-4xl text-white">
+            <span class="text-4xl text-white">Get 20% off</span>
+            <span class="text-2xl text-white">on your first order</span>
+          </h1>
+        </div>
+      </section>
+     <!-- section4 card -->
+      <section class="w-full relative py-6 ">
+        <div
+          class="max-w-screen-xl flex w-full relative flex-col items-center mx-auto min-h-[560px]"
+        >
+          <div class="mt-6 flex flex-col items-center">
+            <h1 class="lg:text-4xl text-2xl text-fuchsia-600 font-bold">
+              Flower gift for every Occasion
+            </h1>
+            <div class="w-3/4 h-1 rounded-full bg-fuchsia-600/50 mt-3"></div>
+          </div>
+          <div
+            class="grid xl:grid-cols-12 md:grid-cols-6 w-full mt-12 gap-4 xl:p-0 p-4"
+          >
+            <div
+              class="col-span-3 group p-2 border relative w-full rounded-xl cursor-pointer hover:shadow-lg hover:scale-105 transition duration-150 ease-out hover:ease-in shadow-fuchsia-600 rounded-sm"
+            >
+              <div class="w-full h-[340px] relative rounded-2xl">
+                <img
+                  src="../assets/img/img7.jpg"
+                  class="w-full h-full object-cover rounded-xl"
+                  alt="Flower"
+                />
+                <div
+                  class="absolute w-full h-full bg-black/40 top-0 opacity-0 flex items-center justify-center group-hover:opacity-100 right-0 bg-black/20 z-[2] rounded-2xl transition duration-150 ease-out hover:ease-in"
+                >
+                  <h1
+                    class="text-white text-2xl font-bold transition duration-150 ease-out opacity-0 group-hover:opacity-100"
+                  >
+                    birthday
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-span-3 group p-2 border relative w-full rounded-xl cursor-pointer hover:shadow-lg hover:scale-105 transition duration-150 ease-out hover:ease-in shadow-fuchsia-600 rounded-sm"
+            >
+              <div class="w-full h-[340px] relative rounded-2xl">
+                <img
+                  src="../assets/img/img8.jpg"
+                  class="w-full h-full object-cover rounded-xl"
+                  alt="Flower"
+                />
+                <div
+                  class="absolute w-full h-full bg-black/40 top-0 opacity-0 flex items-center justify-center group-hover:opacity-100 right-0 bg-black/20 z-[2] rounded-2xl transition duration-150 ease-out hover:ease-in"
+                >
+                  <h1
+                    class="text-white text-2xl font-bold transition duration-150 ease-out opacity-0 group-hover:opacity-100"
+                  >
+                    Apologizes
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-span-3 group p-2 border relative w-full rounded-xl cursor-pointer hover:shadow-lg hover:scale-105 transition duration-150 ease-out hover:ease-in shadow-fuchsia-600 rounded-sm"
+            >
+              <div class="w-full h-[340px] relative rounded-2xl">
+                <img
+                  src="../assets/img/img9.jpg"
+                  class="w-full h-full object-cover rounded-xl"
+                  alt="Flower"
+                />
+                <div
+                  class="absolute w-full h-full bg-black/40 top-0 opacity-0 flex items-center justify-center group-hover:opacity-100 right-0 bg-black/20 z-[2] rounded-2xl transition duration-150 ease-out hover:ease-in"
+                >
+                  <h1
+                    class="text-white text-2xl font-bold transition duration-150 ease-out opacity-0 group-hover:opacity-100"
+                  >
+                    Valentine Day
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-span-3 group p-2 border relative w-full rounded-xl cursor-pointer hover:shadow-lg hover:scale-105 transition duration-150 ease-out hover:ease-in shadow-fuchsia-600 rounded-sm"
+            >
+              <div class="w-full h-[340px] relative rounded-2xl">
+                <img
+                  src="../assets/img/img10.jpg"
+                  class="w-full h-full object-cover rounded-xl"
+                  alt="Flower"
+                />
+                <div
+                  class="absolute w-full h-full bg-black/40 top-0 opacity-0 flex items-center justify-center group-hover:opacity-100 right-0 bg-black/20 z-[2] rounded-2xl transition duration-150 ease-out hover:ease-in"
+                >
+                  <h1
+                    class="text-white text-2xl font-bold transition duration-150 ease-out opacity-0 group-hover:opacity-100"
+                  >
+                    Special Day
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section5 logo -->
+      <section class="w-full relative pb-32">
+        <div
+          class="max-w-screen-xl flex w-full relative flex-col items-center mx-auto min-h-[560px]"
+        >
+          
+        <div
+            class="grid xl:grid-cols-12 md:grid-cols-6 w-full mt-12 gap-4 xl:p-0 p-4"
+          >
+          <div
+          class="col-span-3 group p-2 border w-full rounded-xl cursor-pointer hover:shadow-lg hover:scale-105 transition duration-150 ease-out hover:ease-in shadow-fuchsia-600 rounded-sm"
+        >
+        <div class="container mx-auto">
+          <div class="flex flex-col items-center justify-center p-10">
+            <img src="../assets/img/img11.png" alt="Delivery truck" class="w-64 mb-8">
+            <h1 class="text-3xl font-bold text-center text-black-500">Free Delivery</h1>
+            <p class="text-center text-black-500">Free Delivery from 9am-12pm</p>
+          </div>
+        </div>
+        </div>
+        
+        <div
+              class="col-span-3 group p-2 border w-full rounded-xl cursor-pointer hover:shadow-lg hover:scale-105 transition duration-150 ease-out hover:ease-in shadow-fuchsia-600 rounded-sm"
+            >
+            <div class="container mx-auto">
+              <div class="flex flex-col items-center justify-center p-10">
+                <img src="../assets/img/img12.png" alt="Qulity" class="w-64 mb-8">
+                <h1 class="text-3xl font-bold text-center text-black-500">Quality</h1>
+                <p class="text-center text-black-500">Quality Assurence For fresh flower</p>
+              </div>
+            </div>
+            </div>
+
+            <div
+            class="col-span-3 group p-2 border w-full rounded-xl cursor-pointer hover:shadow-lg hover:scale-105 transition duration-150 ease-out hover:ease-in shadow-fuchsia-600 rounded-sm"
+          >
+          <div class="container mx-auto">
+            <div class="flex flex-col items-center justify-center p-10">
+              <img src="../assets/img/img13.png" alt="Feedback" class="w-64 mb-8">
+              <h1 class="text-3xl font-bold text-center text-black-500">Feed Back</h1>
+              <p class="text-center text-black-500">Free complain and review</p>
+            </div>
+          </div>
+          </div>
+    
+          <div
+          class="col-span-3 group p-2 border w-full rounded-xl cursor-pointer hover:shadow-lg hover:scale-105 transition duration-150 ease-out hover:ease-in shadow-fuchsia-600 rounded-sm"
+        >
+        <div class="container mx-auto">
+          <div class="flex flex-col items-center justify-center p-10">
+            <img src="../assets/img/img14.png" alt="Refune" class="w-64 mb-8">
+            <h1 class="text-3xl font-bold text-center text-black-500">Refund money</h1>
+            <p class="text-center text-black-500">Can refund money back between 1hour</p>
+          </div>
+        </div>
+        </div>
+
+      </div>
+      </section>
+      
+    </main>
+
+    <!-- main -->
+  
+
+    <!-- Footer -->
+
+    <footer class="bg-white dark:bg-fuchsia-200">
+      <div class="mx-auto w-full max-w-screen-xl">
+        <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+          <div>
+            <h2
+              class="mb-6 text-lg font-semibold text-gray-900 uppercase dark:text-black"
+            >
+              Learn more about
+            </h2>
+            <ul class="text-black-500 dark:text-black-400 font-medium">
+              <li class="mb-4">
+                <a href="#" class="hover:underline">company</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Safe shopping</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Privacy</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Delivery</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Site Map</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="mb-6 text-lg font-semibold text-gray-900 uppercase dark:text-black"
+            >
+              Shop
+            </h2>
+            <ul class="text-black-500 dark:text-black-400 font-medium">
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Valentine day</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Anniversary</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Birthday</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">For Patient</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">For yourself</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              Legal
+            </h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Privacy Policy</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Licensing</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="mb-6 text-lg font-semibold text-white-900 uppercase dark:text-white"
+            >
+              Download
+            </h2>
+            <ul class="text-white-500 dark:text-white-400 font-medium">
+              <li class="mb-4">
+                <a href="#" class="hover:underline">iOS</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Android</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Windows</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">MacOS</a>
+              </li>
+              <li
+                class="flex mt-4 sm:justify-start md:mt-0 space-x-5 rtl:space-x-reverse col-span-4 me-10"
+              >
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 8 19"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span class="sr-only">Facebook page</span>
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 21 16"
+                  >
+                    <path
+                      d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"
+                    />
+                  </svg>
+                  <span class="sr-only">Discord community</span>
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 20 17"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span class="sr-only">Twitter page</span>
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span class="sr-only">GitHub account</span>
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span class="sr-only">Dribbble account</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  </body>
+</html>
